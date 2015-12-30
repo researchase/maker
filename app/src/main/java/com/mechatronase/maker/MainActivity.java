@@ -79,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
                 user.signUpInBackground(new SignUpCallback() {
                     public void done(com.parse.ParseException e) {
                         if (e == null) {
+                            Intent intent = new Intent(getApplicationContext(), UserList.class);
+                            startActivity(intent);
                             //start next activity
                             //start sinch service
                         } else {
